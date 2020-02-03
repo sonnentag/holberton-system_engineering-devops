@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':' ; echo $PATH | wc -w
+IFS=':' ; wc -w $PATH
