@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':' ; wc -w $PATH
+printenv PATH | tr : ' ' | wc -w
