@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # list current directory removing beginning of filenames to first '-'
 
-for x in $(ls)
+list=$(ls)
+
+for x in $list
  do
 
-    echo $x | cut -d- -f2-
+    echo "$x" | cut -d- -f2-
 
 done
 
