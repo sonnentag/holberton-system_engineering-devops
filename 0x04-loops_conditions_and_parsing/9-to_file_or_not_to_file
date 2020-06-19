@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# ehehe
+
+file=holbertonschool
+
+if [ -e "$file" ] 
+ then
+
+    echo "$file file exists" 
+
+    [ -s "$file" ] && echo "$file file is not empty" || echo "$file file is empty"
+
+    [ -f "$file" ] && echo "$file is a regular file"
+
+ else
+
+    echo "$file file does not exist"
+
+fi
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# what
+
+for x in $(ls)
+ do
+
+    echo $x | cut -d- -f2-
+
+done
+
