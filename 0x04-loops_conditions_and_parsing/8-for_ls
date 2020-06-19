@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# what
+# list current directory removing beginning of filenames to first '-'
 
 for x in $(ls)
  do

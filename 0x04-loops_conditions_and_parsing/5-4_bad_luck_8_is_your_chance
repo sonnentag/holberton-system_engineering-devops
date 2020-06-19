@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times (using while)
+# print string subbing bad number/good number for 3rd/7th iteration
 
 i=0 # 0 index
 

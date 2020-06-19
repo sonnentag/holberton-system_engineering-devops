@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# description
+# print every 59 minutes for 0-12 (13) hours
 
 h=0
 m=1
