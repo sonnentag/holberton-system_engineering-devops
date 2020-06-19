@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# 
+
+exec 3< /etc/passwd
+
+while read -u 3 -r line
+ do
+
+ echo "$line" | cut -d: -f1,3,7
+
+done
