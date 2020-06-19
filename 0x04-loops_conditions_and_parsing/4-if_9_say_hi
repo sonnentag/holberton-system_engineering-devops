@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times (using while)
 
-i=0
+i=0 # 0 index
 
 while [ $i -lt 10 ]
 
  do
 
     echo "Holberton School"
+
+    if [ $i == 8 ] # 9th iteration
+     then
+        echo "hi"
+    fi
+
     i=$((i + 1))
 
 done

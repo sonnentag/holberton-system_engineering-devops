@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 
-for (( x=0; x<10; x++ ))
+x=0
+
+until [ $x == 10 ]
 
  do 
 
-    echo "Holberton School" 
+    echo "Holberton School"
+    x=$((x + 1))
 
 done
 
