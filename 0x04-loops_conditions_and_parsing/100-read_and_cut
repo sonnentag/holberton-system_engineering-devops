@@ -9,3 +9,5 @@ while read -u 3 -r line
  echo "$line" | cut -d: -f1,3,7
 
 done
+
+exec 3<&-

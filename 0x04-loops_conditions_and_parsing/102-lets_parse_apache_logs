@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# print ip and http code from apache log using awk
+awk '{print $1,$9}' apache-access.log
