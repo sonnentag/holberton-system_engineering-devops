@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times (using while)
+
+i=0 # 0 index
+
+while [ $i -lt 10 ]
+
+ do
+
+
+    if [ $i == 3 ] # 4th iteration
+     then
+
+        echo "bad luck"
+
+    elif [ $i == 7 ] # 8th iteration
+     then
+
+        echo "good luck"
+
+    else # all others
+
+        echo "Holberton School"
+
+    fi
+
+    i=$((i + 1))
+
+done
+
