@@ -5,7 +5,7 @@ PIDFILE=/var/run/holbertonscript.pid
 echo $$ > $PIDFILE
 
 _term() { 
-  echo "I am invincible!!!"
+  echo "I hate the kill command"
   rm $PIDFILE
   exit 
 }
