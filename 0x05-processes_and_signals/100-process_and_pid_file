@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# combine previous tasks and concepts throwing in a /var/run/ example as well
+
+PIDFILE=/var/run/holbertonscript.pid
+echo $$ > $PIDFILE
+
+_term() { 
+  echo "I am invincible!!!"
+  rm $PIDFILE
+  exit 
+}
+_int() {
+ echo "Y U no love me?!"
+}
+trap _term SIGTERM
+trap _term SIGQUIT
+trap _int SIGINT
+
+while true
+ do 
+
+    echo "To infinity and beyond" 
+
+    sleep 2
+
+done
+

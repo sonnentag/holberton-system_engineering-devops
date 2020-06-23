@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# print lines of ps output matching the string "bash"
+# shellcheck disable=SC2009
+ps auxf | grep bash
