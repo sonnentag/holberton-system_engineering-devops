@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# list open sockets and their pid
+netstat -lp
