@@ -1,4 +1,4 @@
-## command_line_foe_the_win
+## command_line_for_the_win
 ####  27 tasks completed from cmdchallenge.com
 ### 0-first_9_tasks.jpg
 First 九 tasks
