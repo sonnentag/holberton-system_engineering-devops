@@ -5,3 +5,4 @@ connect to ssh using key auth
 create key pair
 #### 2-ssh_config
 ssh config disabling password auth and specifying alternate private key
+4-puppet_ssh_config.pp
