@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# install nginx and set default webpage
+
+apt-get update 
+
+apt-get install nginx
+
+sed 's/Welcome\ to/Holberton/g;s/nginx\!/School/g' \
+ /var/www/html/index.nginx-debian.html > /var/www/html/index.html
+
