@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # install nginx and set default webpage
 
+apt-get update
 apt-get -y install nginx
+ufw allow 'Nginx HTTP'
 
-echo "Holberton School for the win!" > /var/www/html/index.html
-
+sed 's/Welcome\ to/Holberton/g;s/nginx\!/School/g' \
+ /var/www/html/index.nginx-debian.html > /var/www/html/index.html
