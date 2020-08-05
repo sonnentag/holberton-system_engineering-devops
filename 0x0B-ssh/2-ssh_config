@@ -1,0 +1,4 @@
+# ssh config disabling password auth and specifying alternate private key
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/holberton

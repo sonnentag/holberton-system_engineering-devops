@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# connect to ssh using key auth
+ssh -i ~/.ssh/holberton ubuntu@35.196.15.83 
