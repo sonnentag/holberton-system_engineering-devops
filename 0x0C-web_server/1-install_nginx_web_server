@@ -3,7 +3,7 @@
 
 apt-get update
 apt-get -y install nginx
-ufw allow 'Nginx HTTP'
+ufw allow http 
 
 sed 's/Welcome\ to/Holberton/g;s/nginx\!/School/g' \
  /var/www/html/index.nginx-debian.html > /var/www/html/index.html
