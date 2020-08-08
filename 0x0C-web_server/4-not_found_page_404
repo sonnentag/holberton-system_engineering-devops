@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# install nginx, set default webpage, and set redirect and 404 page
+
+apt-get update
+apt-get -y install nginx
+ufw allow http 
+
+sed 's~Welcome\ to~Holberton~g;s~nginx\!~School~g' \
+ /var/www/html/index.nginx-debian.html > /var/www/html/index.html
+
+sed -i 's~^}~\n\trewrite ^/redirect_me http://www.rawilson.com/quantum.html permanent;\n\n}~' /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+
+sed -i 's~^}~\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n}~' /etc/nginx/sites-available/default
+
+service nginx restart
