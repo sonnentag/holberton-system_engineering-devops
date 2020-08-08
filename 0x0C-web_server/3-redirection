@@ -8,6 +8,6 @@ ufw allow http
 sed 's~Welcome\ to~Holberton~g;s~nginx\!~School~g' \
  /var/www/html/index.nginx-debian.html > /var/www/html/index.html
 
-sed -i 's~^}~\n\trewrite ^/redirect_me http://www.rawilson.com/quantum.html permanent;\n\n}~' default
+sed -i 's~^}~\n\trewrite ^/redirect_me http://www.rawilson.com/quantum.html permanent;\n\n}~' /etc/nginx/sites-available/default
 
 service nginx restart
