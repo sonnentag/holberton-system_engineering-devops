@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# restart nginx with alternate pid file
+# sub port 8080 to 80 and send hup to nginx
 sed -i 's/808/8/' /etc/nginx/sites-enabled/default
 pkill -1 -f /usr/sbin/nginx
