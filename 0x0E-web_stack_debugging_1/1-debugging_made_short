@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # restart nginx with alternate pid file
 sed -i 's/808/8/' /etc/nginx/sites-enabled/default
-kill -SIGHUP "$(ps -x | awk '/nginx/ {print $1}')"
+pkill -1 -f /usr/sbin/nginx
