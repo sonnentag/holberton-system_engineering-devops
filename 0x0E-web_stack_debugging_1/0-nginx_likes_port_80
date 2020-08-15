@@ -1,0 +1,5 @@
+#!/bin/env bash
+# fix 8080 issue on docker container
+mv /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default-8080
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+service nginx restart
