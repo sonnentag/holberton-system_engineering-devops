@@ -14,9 +14,8 @@ frontend lb-01
 
 backend servers
 	balance roundrobin
-	default-server check
-	server 1706-web-01 35.196.15.83:80
-	server 1706-web-02 100.26.58.124:80
+	server 1706-web-01 35.196.15.83:80 check
+	server 1706-web-02 100.26.58.124:80 check
 EOF
 
 service haproxy restart
