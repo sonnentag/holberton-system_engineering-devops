@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # lookup default hosts or host supplied from domain provided
 
 lookup_host () {
