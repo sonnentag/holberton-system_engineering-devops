@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# run whoami as user provided
+su -c whoami -s /bin/bash "$1"

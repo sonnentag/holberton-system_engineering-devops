@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# run nginx as non-privileged user
+sed -i 's/808/8/' /etc/apache2/ports.conf
+service apache2 restart
+sed -i '/^[[:blank:]]*listen/s/8/808/' /etc/nginx/sites-available/default
+chmod 644 /etc/nginx/nginx.conf
+sed -i '/www-data/s/^#//' /etc/nginx/nginx.conf
+su -c '/usr/sbin/nginx -c /etc/nginx/nginx.conf -p /etc/nginx/' nginx
