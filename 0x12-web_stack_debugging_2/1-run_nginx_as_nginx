@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # run nginx as non-privileged user
-sed -i 's/\ 8080$/\ 80/' /etc/apache2/ports.conf
 pkill apache2
-service apache2 start
 sed -i '/^[[:blank:]]*listen/s/\ 80\ /\ 8080\ /' /etc/nginx/sites-available/default
 chmod 644 /etc/nginx/nginx.conf
 chown nginx:nginx /etc/nginx/nginx.conf
-su -c '/usr/sbin/nginx -c /etc/nginx/nginx.conf -p /etc/nginx/' nginx
+su -c 'service nginx start' nginx
