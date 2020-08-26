@@ -1,3 +1,4 @@
+service
 ufw default deny incoming
 ufw allow ssh 
 ufw allow http
