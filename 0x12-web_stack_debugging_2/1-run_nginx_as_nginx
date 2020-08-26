@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # run nginx as non-privileged user
 pkill apache2
-sed -i '/^[[:blank:]]*listen/s/\ 80\ /\ 8080\ /' /etc/nginx/sites-available/default
 chmod 644 /etc/nginx/nginx.conf
 chown nginx:nginx /etc/nginx/nginx.conf
-su -c 'service nginx start' nginx
+sed -i '/^[[:blank:]]*listen.*80/s/80/8080/' /etc/nginx/sites-available/default
+sed -i '/ipv6only/s/\ ipv6.*;$/;/' /etc/nginx/sites-available/default
+su -c 'service nginx restart' nginx
