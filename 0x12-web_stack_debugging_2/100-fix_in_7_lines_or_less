@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run nginx as non-privileged user
-pkill apache2
+pkill -f apache2
 chmod 777 /etc/nginx/nginx.conf
-sed -i '/^[[:blank:]]*listen.*[ :]80\ /s/80.*default.*;$/8080\  default_server;/' /etc/nginx/sites-available/default
-su -c 'service nginx start' nginx
+sed -i 's/80/8080/' /etc/nginx/sites-available/default
+su -c 'service nginx restart' nginx
