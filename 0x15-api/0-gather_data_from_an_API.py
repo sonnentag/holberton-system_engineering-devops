@@ -7,19 +7,15 @@ import requests
 
 if __name__ == "__main__":
     ''' main '''
-    try:
-        eid = sys.argv[1]
-        url = "https://jsonplaceholder.typicode.com/users/" + eid
-        name = requests.get(url).json().get("name")
-        num_todos = len(requests.get(url + "/todos/").json())
-        completed = requests.get(url + "/todos/",
-                                 params={"completed": 'true'}).json()
+    eid = sys.argv[1]
+    url = "https://jsonplaceholder.typicode.com/users/" + eid
+    name = requests.get(url).json().get("name")
+    num_todos = len(requests.get(url + "/todos/").json())
+    completed = requests.get(url + "/todos/",
+                             params={"completed": 'true'}).json()
 
-        print("Employee {} is done with tasks({}/{})"
-              .format(name, len(completed), num_todos))
-        for todo in completed:
-            title = todo.get("title")
-            print("     {}".format(title))
-
-    except Exception as err:
-        sys.stderr.write(str(err) + "\n")
+    print("Employee {} is done with tasks({}/{})"
+          .format(name, len(completed), num_todos))
+    for todo in completed:
+        title = todo.get("title")
+        print("     {}".format(title))
