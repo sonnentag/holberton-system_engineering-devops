@@ -14,7 +14,7 @@ if __name__ == "__main__":
     completed = requests.get(url + "/todos/",
                              params={"completed": 'true'}).json()
 
-    print("Employee {} is done with tasks({}/{})"
+    print("Employee {} is done with tasks({}/{}):"
           .format(name, len(completed), num_todos))
     for todo in completed:
         title = todo.get("title")
