@@ -8,18 +8,14 @@ import csv
 
 if __name__ == "__main__":
     ''' main '''
-    try:
-        eid = sys.argv[1]
-        url = "https://jsonplaceholder.typicode.com/users/" + eid
-        username = requests.get(url).json().get("username")
-        todos = requests.get(url + "/todos/").json()
+    eid = sys.argv[1]
+    url = "https://jsonplaceholder.typicode.com/users/{}".format(eid)
+    username = requests.get(url).json().get("username")
+    todos = requests.get(url + "/todos/").json()
 
-        with open("{}.csv".format(eid), 'w') as csvfile:
-            writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+    with open("{}.csv".format(eid), 'w') as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
 
-            for todo in todos:
-                writer.writerow([eid, username,
-                                todo.get("completed"), todo.get("title")])
-
-    except:
-        pass
+        for todo in todos:
+            writer.writerow([eid, username,
+                            todo.get("completed"), todo.get("title")])
