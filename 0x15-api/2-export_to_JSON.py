@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ write json file with todo list info """
 
-import sys
-import requests
 import json
+import requests
+import sys
 
 
 if __name__ == "__main__":

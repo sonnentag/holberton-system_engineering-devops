@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ write json file all users todo list info """
 
-import requests
 import json
+import requests
 
 
 if __name__ == "__main__":
