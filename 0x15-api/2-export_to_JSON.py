@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" write csv file with todo list info """
+""" write json file with todo list info """
 
 import sys
 import requests
@@ -16,7 +16,7 @@ if __name__ == "__main__":
             todos = requests.get(url + "/todos/").json()
             todo_list = []
 
-            with open(eid + ".json", 'w') as jsonfile:
+            with open("{}.json".format(eid), 'w') as jsonfile:
                 for todo in todos:
                     todo_list.append(
                         {
