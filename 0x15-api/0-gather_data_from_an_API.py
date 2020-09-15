@@ -20,6 +20,6 @@ if __name__ == "__main__":
                   .format(name, len(completed), num_todos))
             for todo in completed:
                 title = todo.get("title")
-                print("     {}".format(title))
+                print("\t {}".format(title))
     except:
         pass
