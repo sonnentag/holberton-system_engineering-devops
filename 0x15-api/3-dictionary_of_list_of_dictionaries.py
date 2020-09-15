@@ -17,7 +17,7 @@ if __name__ == "__main__":
                 "{}{}".format(url, eid)).json().get("username")
             if username:
                 todos = requests.get(
-                "{}{}/todos/".format(url, eid)).json()
+                    "{}{}/todos/".format(url, eid)).json()
                 todo_list = []
 
                 for todo in todos:
