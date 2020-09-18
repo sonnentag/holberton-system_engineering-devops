@@ -12,7 +12,7 @@ def top_ten(subreddit):
 
     try:
         resp = requests.get(url, headers=hdrs, allow_redirects=False).\
-            json().get('data') 
+            json().get('data')
         [print(c['data']['title']) for c in resp.get('children')]
     except:
         print(None)
