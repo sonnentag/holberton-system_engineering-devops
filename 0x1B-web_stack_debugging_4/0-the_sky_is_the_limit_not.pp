@@ -1,4 +1,4 @@
-# uncomment/add ULIMIT in /etc/default/nginx and reload service
+# comment out ULIMIT in /etc/default/nginx and restart service
 exec {'ulimit':
-  command => "/bin/sed -i '/^ULIMIT/s/^/#/' /etc/default/nginx ; /bin/systemctl restart nginx",
+  command => "/bin/sed -i '/^ULIMIT/s/^/#/' /etc/default/nginx ; /usr/sbin/service restart nginx",
   }
